@@ -28,6 +28,7 @@ const Repos = () => {
       } catch (error) {
         console.error('Error fetching repos:', error);
         setRepos([]);
+        
       }
     };
 
