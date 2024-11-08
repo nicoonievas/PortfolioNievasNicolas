@@ -27,7 +27,18 @@ const Repos = () => {
         console.log(data);
       } catch (error) {
         console.error('Error fetching repos:', error);
-        setRepos([]);
+        setRepos([
+          {
+            id: 1,
+            name: 'Repositorio de ejemplo',
+            description: 'Este es un repositorio de ejemplo porque no se pudo autenticar.',
+            language: 'JavaScript',
+            html_url: 'https://github.com/ejemplo/repo',
+            owner: {
+              login: 'ejemplo',
+            },
+          },
+        ]);
         
       }
     };
