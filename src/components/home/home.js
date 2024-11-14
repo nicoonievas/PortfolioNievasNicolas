@@ -1,9 +1,9 @@
 import React from 'react'; 
-import { Box, Image, Text, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Box, Image, Text, Heading, useColorModeValue, Link } from '@chakra-ui/react';
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Home = () => {
-    // Usamos useColorModeValue para cambiar el color de texto según el modo
-    const textColor = useColorModeValue("black", "white");  // Negro en modo claro, blanco en modo oscuro
+    const textColor = useColorModeValue("black", "white");
 
     return (
         <Box width="100%" display="flex" justifyContent="center" alignItems="center" my={4}>
@@ -11,7 +11,7 @@ const Home = () => {
                 src="/retrato.jpg"
                 alt="Nicolas Nievas"
                 borderRadius="full"
-                width="300px" // Imagen tres veces más grande
+                width="300px"
                 height="300px"
                 mr={10}
             />
@@ -38,6 +38,14 @@ const Home = () => {
                     <br />
                     y trabajar en proyectos nuevos.
                 </Text>
+                <Box mt={4} display="flex" justifyContent="center" gap={4}>
+                    <Link href="https://www.linkedin.com/in/nicolas-nievas-659853148/" isExternal color="blue.500" fontSize="24px">
+                        <FaLinkedin />
+                    </Link>
+                    <Link href="https://www.instagram.com/nicoonievas/" isExternal color="purple.500" fontSize="24px">
+                        <FaInstagram />
+                    </Link>
+                </Box>
             </Box>
         </Box>
     );
