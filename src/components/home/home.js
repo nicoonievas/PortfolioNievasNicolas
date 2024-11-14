@@ -6,16 +6,24 @@ const Home = () => {
     const textColor = useColorModeValue("black", "white");
 
     return (
-        <Box width="100%" display="flex" justifyContent="center" alignItems="center" my={4}>
+        <Box 
+            width="100%" 
+            display="flex" 
+            flexDirection={{ base: "column", md: "row" }} // Columna en pantallas pequeñas, fila en pantallas medianas o grandes
+            justifyContent="center" 
+            alignItems="center" 
+            my={4}
+        >
             <Image
                 src="/retrato.jpg"
                 alt="Nicolas Nievas"
                 borderRadius="full"
-                width="300px"
-                height="300px"
-                mr={10}
+                width={{ base: "200px", md: "300px" }} // Tamaño adaptativo
+                height={{ base: "200px", md: "300px" }}
+                mb={{ base: 4, md: 0 }} // Margen inferior en móviles
+                mr={{ md: 10 }} // Margen derecho en pantallas medianas o grandes
             />
-            <Box>
+            <Box textAlign={{ base: "center", md: "left" }}> {/* Centrado en pantallas pequeñas */}
                 <Heading as="h1" fontSize="36px" fontWeight="bold" color={textColor}>
                     Hola! Soy Nicolas Nievas
                 </Heading>
@@ -38,7 +46,7 @@ const Home = () => {
                     <br />
                     y trabajar en proyectos nuevos.
                 </Text>
-                <Box mt={4} display="flex" justifyContent="center" gap={4}>
+                <Box mt={4} display="flex" justifyContent={{ base: "center"}} gap={4}>
                     <Link href="https://www.linkedin.com/in/nicolas-nievas-659853148/" isExternal color="blue.500" fontSize="24px">
                         <FaLinkedin />
                     </Link>
