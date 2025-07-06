@@ -12,7 +12,6 @@ const Header = () => {
         <Tab>Sobre mi</Tab>
         <Tab>Proyectos</Tab>
         <Tab>Contacto</Tab>
-        <Tab>Saber Mas</Tab>
         <ToggleColorMode />
       </TabList>
       <TabIndicator mt='-1.5px' height='2px' bg='blue.500' borderRadius='1px' />
