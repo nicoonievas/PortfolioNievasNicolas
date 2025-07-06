@@ -12,6 +12,7 @@ const Header = () => {
         <Tab>Sobre mi</Tab>
         <Tab>Proyectos</Tab>
         <Tab>Contacto</Tab>
+        <Tab>Saber Mas</Tab>
         <ToggleColorMode />
       </TabList>
       <TabIndicator mt='-1.5px' height='2px' bg='blue.500' borderRadius='1px' />
@@ -21,15 +22,15 @@ const Header = () => {
           <Home />
         </TabPanel>
         <TabPanel>
-        <Heading as="h1" fontSize="26px" fontWeight="bold" color={textColor}>
-                        Proyectos
-                    </Heading>
+          <Heading as="h1" fontSize="26px" fontWeight="bold" color={textColor}>
+            Proyectos
+          </Heading>
           <Repos />
         </TabPanel>
         <TabPanel>
-        <Heading as="h1" fontSize="26px" fontWeight="bold" color={textColor}>
-                        Contacto
-                    </Heading>
+          <Heading as="h1" fontSize="26px" fontWeight="bold" color={textColor}>
+            Contacto
+          </Heading>
           <Contacto />
         </TabPanel>
       </TabPanels>
